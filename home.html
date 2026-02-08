@@ -16,16 +16,52 @@
     }
 
     header {
-      background: #4a90e2;
+      background: darkgreen;
       color: white;
       padding: 2rem 1rem;
       text-align: center;
     }
 
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+    #main {
+      background-color: green;
+      display: flex;
+      height: 100vh;
+    }
+
+    .column {
+      flex: 1;
+      border: 7px solid green;
+    }
+
+    .container {
+      height: 90px;
+      border: 2px solid black;
+      margin: 10px;
+    }
+
+    .left{
+      text-align: center;
+      background-color: dimgrey
+    }
+
+    .middle{
+      background-color: gray
+    }
+
+    .right{
+      background-color: lightgrey
+    }
+
+    #ClickerButton{
+
+      font-size: 100px;
+      margin-top: 20px;
+      background-color: darkgreen;
+    }
+
+    #CounterDisplay {
+      background-color: darkgreen;
+      font-size: 100%;
     }
 
     section {
@@ -51,33 +87,47 @@
   
   
 </head>
+
+
 <body>
 
   <header>
-    <h1>Welcome to My Homepage</h1>
-    <p>A simple HTML page</p>
+    <h1>Welcome to Our Homepage</h1>
+    <p>It's kinda Boss</p>
   </header>
 
-  <main>
-    <section>
-      <h2>Home</h2>
-      <p>
-        This is a basic homepage built with plain HTML.
-        You can use it as a starting point for other pages.
-      </p>
-    </section>
+  <div id="main">
 
-    <section>
-      <h2>Links</h2>
-      <ul>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </section>
-  </main>
+        <section class="column left">
+          <div id="CounterDisplay">Crypto Coins: 0</div>
+          <button id="ClickerButton">$</button>
+        </section>
+
+        <section class="column middle">
+          <div class="container">middle Box</div>
+        </section>
+
+        <section class="column right">
+          <div class="container">rightBox</div>
+        </section>
+
+  </div>
+
 
   <footer>
     <p>© 2026 ...</p>
   </footer>
+
+
+  <script>
+    let count = 0;
+
+    document.getElementById("ClickerButton").onclick = function () {
+      count++;
+      document.getElementById("CounterDisplay").textContent = "Crypto Coins: " + String(count);
+    };
+  </script>
+
 
 </body>
 </html>
