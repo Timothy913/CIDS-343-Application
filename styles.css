@@ -19,6 +19,21 @@ header {
   height: 100vh;
 }
 
+#welcome {
+  margin: 2px;
+  height: 50px;
+  width: 200px;
+  padding: 5px;
+}
+
+#upgrade1, #upgrade2 {
+  margin: 2px;
+  height: 50px;
+  width: 200px;
+  padding: 5px;
+  text-align: center;
+}
+
 .column {
   flex: 1;
   border: 7px solid green;
@@ -28,6 +43,7 @@ header {
   height: 90px;
   border: 2px solid black;
   margin: 10px;
+  text-align: center;
 }
 
 .left{
